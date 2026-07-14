@@ -1,0 +1,21 @@
+# Smithery runtime config (https://smithery.ai/docs/config)
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      proxyllmAccountToken:
+        type: string
+        description: Optional sk_/rk_ ProxyLLM account token for management tools. Create one autonomously via the proxyllm_signup tool or https://proxyllm.ai/auth.md
+      proxyllmRoutingKey:
+        type: string
+        description: Optional pllm_ routing key for key introspection.
+  commandFunction: |-
+    (config) => ({
+      command: 'node',
+      args: ['server.js'],
+      env: {
+        ...(config.proxyllmAccountToken ? { PROXYLLM_ACCOUNT_TOKEN: config.proxyllmAccountToken } : {}),
+        ...(config.proxyllmRoutingKey ? { PROXYLLM_ROUTING_KEY: config.proxyllmRoutingKey } : {})
+      }
+    })

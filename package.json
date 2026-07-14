@@ -1,0 +1,37 @@
+{
+  "name": "proxyllm-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for ProxyLLM, the OpenAI-compatible LLM gateway. Model catalog, plan-savings calculator, routing-key introspection and provisioning, and autonomous email-OTP account signup.",
+  "type": "module",
+  "bin": {
+    "proxyllm-mcp": "server.js"
+  },
+  "files": [
+    "server.js",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "llm-gateway",
+    "openai-compatible",
+    "proxyllm",
+    "codex",
+    "http-402",
+    "agent"
+  ],
+  "author": "ProxyLLM (https://proxyllm.ai)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericslab/proxyllm-mcp.git"
+  },
+  "homepage": "https://proxyllm.ai/docs/api",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.24.0"
+  }
+}
