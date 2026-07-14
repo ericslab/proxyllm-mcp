@@ -1,0 +1,45 @@
+{
+  "manifest_version": "0.2",
+  "name": "proxyllm-mcp",
+  "display_name": "ProxyLLM",
+  "version": "1.0.1",
+  "description": "OpenAI-compatible LLM gateway: models, savings math, key provisioning, autonomous email-OTP signup",
+  "long_description": "MCP server for ProxyLLM. Live model catalog, plan-savings calculator, routing-key introspection and provisioning, and an account signup flow an agent can complete autonomously (email OTP in, sk_ token out, HTTP 402 with a checkout link until a human activates the membership).",
+  "author": {
+    "name": "ProxyLLM",
+    "url": "https://proxyllm.ai"
+  },
+  "homepage": "https://proxyllm.ai/docs/api",
+  "documentation": "https://proxyllm.ai/auth.md",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ericslab/proxyllm-mcp"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "server.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server.js"
+      ]
+    }
+  },
+  "user_config": {
+    "proxyllm_account_token": {
+      "type": "string",
+      "title": "ProxyLLM account token",
+      "description": "Optional sk_/rk_ account token for management tools",
+      "sensitive": true,
+      "required": false
+    }
+  },
+  "keywords": [
+    "llm-gateway",
+    "openai-compatible",
+    "proxyllm",
+    "codex",
+    "http-402"
+  ]
+}
