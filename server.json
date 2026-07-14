@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "ai.proxyllm/proxyllm-mcp",
+  "description": "OpenAI-compatible LLM gateway: models, savings math, key provisioning, autonomous email-OTP signup",
+  "repository": {
+    "url": "https://github.com/ericslab/proxyllm-mcp",
+    "source": "github"
+  },
+  "version": "1.0.1",
+  "websiteUrl": "https://proxyllm.ai/docs/api",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "proxyllm-mcp",
+      "version": "1.0.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "PROXYLLM_ACCOUNT_TOKEN",
+          "description": "Optional sk_/rk_ account token for management tools. Create one autonomously via the proxyllm_signup tool or https://proxyllm.ai/auth.md",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "PROXYLLM_ROUTING_KEY",
+          "description": "Optional pllm_ routing key for key introspection and key-scoped model lists.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
