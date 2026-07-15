@@ -14,7 +14,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ericslab/proxyllm-mcp"
+    "url": "https://github.com/proxyllm-ai/proxyllm-mcp"
   },
   "server": {
     "type": "node",

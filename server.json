@@ -3,7 +3,7 @@
   "name": "ai.proxyllm/proxyllm-mcp",
   "description": "OpenAI-compatible LLM gateway: models, savings math, key provisioning, autonomous email-OTP signup",
   "repository": {
-    "url": "https://github.com/ericslab/proxyllm-mcp",
+    "url": "https://github.com/proxyllm-ai/proxyllm-mcp",
     "source": "github"
   },
   "version": "1.0.1",
